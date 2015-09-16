@@ -1,9 +1,8 @@
-jQuery(document).ready(function($) {
+$(document).ready(function() {
 	$('.section').css('height', $(window).height() + "px");
 	$('.main').css('line-height', $(window).height() + "px");
 });
-
-jQuery(document).resize(function() {
+$(window).resize(function() {
 	$('.section').css('height', $(window).height() + "px");
-	$('.land').css('line-height', $(window).height() + "px");
+	$('.main').css('line-height', $(window).height() + "px");
 });
