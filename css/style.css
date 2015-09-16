@@ -2,31 +2,57 @@
 *{
 	font-family: 'Arvo', serif;
 	text-align: center;
+	padding: 0;
+	margin: 0;
 }
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Montserrat', sans-serif;
 }
 body{
-	background-color: #3E4651;
+	background-color: #3C3741;
 }
 .img-responsive{
 	width: 100%;
 	height: 100%;
 }
 .land{
-	background-color: #344146;
+	background-color: #3C3741;
 }
 .land .container{
 	vertical-align: middle;
 	display: inline-block;
 }
 .land{
-	width: 100%;
-	padding: 0px 10%;
+	width: 90%;
+	padding: 0px 5%;
 }
-.main{
-	vertical-align: middle;
-}
-.main img{
+.main .content{
 	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+	color: #fff;
+}
+
+.inst{
+	background-image: url('../images/akmain.jpg');
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: relative;
+}
+.section-half{
+	display: block;
+	width: 100%;
+}
+.instruments{
+	position: absolute;
+	display: inline-block;
+	width: 25%;
+}
+#saxo{
+	left: 0;
+}
+#drum{
+	right: 0;
 }
