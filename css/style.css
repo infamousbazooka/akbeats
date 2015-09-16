@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Arvo);
+*{
+	font-family: 'Arvo', serif;
+	text-align: center;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Montserrat', sans-serif;
+}
+body{
+	background-color: #3E4651;
+}
+.land{
+	background-color: #344146;
+}
+.land .container{
+	vertical-align: middle;
+	display: inline-block;
+}
+.land{
+	width: 100%;
+	padding: 0px 10%;
+}
+.main{
+	vertical-align: middle;
+}
