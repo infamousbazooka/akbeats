@@ -13,3 +13,7 @@ function player (instr) {
 	var audio = $(instr)[0];
 	audio.play();
 }
+function stopper (instr) {
+	var audio = $(instr)[0];
+	audio.pause();
+}

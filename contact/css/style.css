@@ -5,35 +5,11 @@
 	padding: 0;
 	margin: 0;
 }
-a,li,ul,ol{
-	text-decoration: none;
-	list-style: none;
-	color: #333;
-}
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Montserrat', sans-serif;
 }
 body{
 	background-color: #3C3741;
-}
-.menu{
-	display: block;
-	font-size: 0;
-	position: absolute;
-	top: 0;
-}
-.link{
-	display: inline-block;
-	vertical-align: top;
-	width: 10%;
-}
-.link p{
-	font-size: 20px;
-	padding: 10px;
-	background-color: #fff;
-}
-.logo{
-	width: 20%;
 }
 .img-responsive{
 	width: 100%;
