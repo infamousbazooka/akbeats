@@ -21,24 +21,46 @@
 			</div>
 		</section>
 		<section class="section inst">
-			<article class="section-half three-inst">
-				<div class="instruments" id="saxo">
-					<img src="images/saxo.png" class="img-responsive" alt="Saxophone">
+			<article class="three-inst">
+				<div class="instruments" id="saxo" onmouseover='player("#saxos")'>
+					<section>
+						<img src="images/saxo.png" class="img-responsive" alt="Saxophone">
+					</section>
 				</div>
-				<div class="instruments" id="flute">
-					<img src="images/flute.png" class="img-responsive" alt="Saxophone">
+				<div class="instruments" id="flute" onmouseover='player("#flutes")'>
+					<section>
+						<img src="images/flute.png" class="img-responsive" alt="Flute">
+					</section>
 				</div>
-				<div class="instruments" id="drum">
-					<img src="images/drum.png" class="img-responsive" alt="Saxophone">
+				<div class="instruments" id="drum" onmouseover='player("#drums")'>
+					<section>
+						<img src="images/drum.png" class="img-responsive" alt="Drums">
+					</section>
 				</div>
 			</article>
 			<article class="section-half">
-				<div class="piano img-responsive">
+				<div class="piano img-responsive" onmouseover='player("#pianos")'>
 					<img src="images/piano.png" class="img-responsive" alt="Piano">
 				</div>
 			</article>
 		</section>
 	</div>
+	<audio id="saxos">
+		<source src="sound/saxo.mp3"></source>
+		Your browser isn't invited for super fun audio time.
+	</audio>
+	<audio id="flutes">
+		<source src="sound/flute.mp3"></source>
+		Your browser isn't invited for super fun audio time.
+	</audio>
+	<audio id="drums">
+		<source src="sound/drum.wav"></source>
+		Your browser isn't invited for super fun audio time.
+	</audio>
+	<audio id="pianos">
+		<source src="sound/piano.mp3"></source>
+		Your browser isn't invited for super fun audio time.
+	</audio>
 <script src="js/lib/jquery.min.js"></script>
 <!-- <script src="js/lib/bootstrap.min.js"></script> -->
 <script src="js/main.js"></script>

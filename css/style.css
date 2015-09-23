@@ -32,7 +32,6 @@ body{
 	line-height: normal;
 	color: #fff;
 }
-
 .inst{
 	background-image: url('../images/akmain.jpg');
 	-webkit-background-size: 100% 100%;
@@ -41,18 +40,18 @@ body{
 	background-attachment: fixed;
 	position: relative;
 }
-.section-half{
+.three-inst{
 	display: block;
 	width: 100%;
 }
 .instruments{
-	position: absolute;
 	display: inline-block;
-	width: 25%;
+	width: 33.16%;
+	height: 100%;
+	vertical-align: top;
 }
-#saxo{
-	left: 0;
-}
-#drum{
-	right: 0;
+.instruments section{
+	height: 70%;
+	width: 70%;
+	margin: 15%;
 }
