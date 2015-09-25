@@ -8,7 +8,9 @@ $(window).resize(function() {
 	$('.section').css('height', $(window).height() + "px");
 	$('.main').css('line-height', $(window).height() + "px");
 });
-
+function hideloader(){
+	$('.loader').css('display', 'none');
+}
 function player (instr) {
 	var audio = $(instr)[0];
 	audio.play();
