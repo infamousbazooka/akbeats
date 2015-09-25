@@ -17,3 +17,14 @@ function stopper (instr) {
 	var audio = $(instr)[0];
 	audio.pause();
 }
+
+var num = $('.land').height();
+$(window).bind('scroll', function() {
+	if ($(window).scrollTop() > num) {
+		$('.menu').addClass('fixed');
+	}
+	else {
+		num = $('.land').height();
+		$('.menu').removeClass('fixed');
+	}
+});
