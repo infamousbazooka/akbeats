@@ -47,9 +47,12 @@ body{
 	background-color: #222d2f;
 }
 .link p:hover, .active p{
-	color: #756b6f;
-	background-color: #27ae60;
+	color: #fff;
+	background-color: #3498db;
 	box-shadow: 0px 0px 10px #222d2f;
+}
+.active p{
+	background-color: #2980b9;
 }
 .link:hover p{
 	-webkit-transform: rotateX(360deg);
@@ -87,7 +90,7 @@ body{
 .insts{
 	margin: 4% 0;
 	padding: 3% 1%;
-	background-color: #27ae60;
+	background-color: #3498db;
 }
 .insts span{
 	padding-bottom: 4px;
@@ -120,6 +123,6 @@ body{
 }
 .footer h4{
 	padding: 2%;
-	background-color: #27ae60;
+	background-color: #2980b9;
 	font-weight: 200;
 }

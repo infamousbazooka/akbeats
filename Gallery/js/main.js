@@ -1,3 +1,6 @@
+function hideloader() {
+	$('.loader').css('display', 'none');
+}
 $(document).ready(function() {
 	$('.section').css('min-height', $(window).height() + "px");
 	$('.main').css('line-height', $(window).height() + "px");
