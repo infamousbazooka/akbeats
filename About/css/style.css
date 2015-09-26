@@ -85,7 +85,17 @@ body{
 }
 .desc{
 	width: 49%;
-	padding: 5%;
+	padding: 1% 5%;
+}
+.desc h2, .desc p{
+	text-align: justify;
+	font-weight: 100;
+}
+.desc h2{
+	margin-top: 10px;
+}
+.desc p{
+	font-size: 120%;
 }
 .insts{
 	margin: 4% 0;

@@ -84,7 +84,7 @@ body{
 .pic{
 	display: inline-block;
 	width: 26%;
-	margin: 1%;
+	margin: 3% 1%;
 	padding: 2%;
 	background-color: #3498db;
 	box-shadow: 0px 10px 10px rgba(34,34,34,0.7);
