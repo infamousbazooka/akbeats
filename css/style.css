@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Pacifico|Montserrat|Arvo);
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One|Montserrat|Arvo);
 *{
 	font-family: 'Arvo', serif;
 	text-align: center;
@@ -48,7 +48,7 @@ body{
 	width: 12%;
 }
 .link p{
-	font-family: 'Pacifico', cursive;
+	font-family: 'Sigmar One', cursive;
 	font-size: 20px;
 	padding: 10px;
 	background-color: #222d2f;
