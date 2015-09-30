@@ -71,11 +71,8 @@ body{
 	width: 100%;
 	height: 100%;
 }
-.gallery{
-	margin-bottom: 4%;
-}
 .gallery h1{
-	margin: 10% 0 4%;
+	margin: 10% 0 0;
 	font-size: 300%;
 }
 .pics{
@@ -96,6 +93,9 @@ body{
 }
 .pic p{
 	text-align: justify;
+}
+.pic h2{
+	font-weight: 100;
 }
 .footer h4{
 	padding: 2%;

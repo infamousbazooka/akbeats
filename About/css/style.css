@@ -20,6 +20,11 @@ h1,h2,h3,h4,h5,h6,span{
 }
 body{
 	background-color: #fff;
+	background-image: url('../../images/about.jpg');
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 .fixed{
 	position: fixed !important;
@@ -88,20 +93,21 @@ body{
 	width: 49%;
 	padding: 1% 5%;
 }
-.desc h2, .desc p{
+.desc p{
 	text-align: justify;
 	font-weight: 100;
-}
-.desc h2{
-	margin-top: 10px;
+	line-height: 200%;
 }
 .desc p{
 	font-size: 120%;
 }
+.desc em{
+	text-shadow: 0px 0px 6px rgb(52,152,219);
+}
 .insts{
 	margin: 4% 0;
 	padding: 3% 1%;
-	background-color: #3498db;
+	background-color: rgba(52,152,219,0.6);
 }
 .insts span{
 	padding-bottom: 4px;
