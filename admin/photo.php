@@ -3,12 +3,11 @@ $albumname = $_POST["albumname"];
 if (!file_exists('../Gallery/Photos/'.$albumname)) {
     mkdir('../Gallery/Photos/'. $albumname .'/images', 0777, true);
 }
-$directory = '../Gallery/Photos/'. $albumname .'/images';
-$filecount = 0;
+$directory = '../Gallery/Photos/'. $albumname .'/images/';
 $files = glob($directory . "*");
+$filecount = 1;
 if ($files){
-    $filecount = count($files);
-    echo $filecount . "Files in" . $directory;
+    $filecount = count($files) + 1;
 }
 $target_dir = "../Gallery/Photos/". $albumname ."/images/";
 $target_file = $target_dir . basename($_FILES["imagetoupload"]["name"]);
