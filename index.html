@@ -58,13 +58,8 @@
 				</div>
 			</article>
 		</section>
-		<section class="section land">
-			<div class="container main">
-				<div class="content">
-					<img src="images/aashna.png" class="img-responsive" alt="AK beats logo">
-					<!-- <h2>AASHNA KUNCOLIENKAR</h2> -->
-				</div>
-			</div>
+		<section class="section">
+			<canvas id="myCanvas"></canvas>
 		</section>
 		<section class="section land gallery">
 			<div class="container main">
@@ -103,6 +98,26 @@
 		Your browser isn't invited for super fun audio time.
 	</audio>
 <script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/alphabet.js"></script>
+<script src="js/lib/bubbles.js"></script>
 <script src="js/main.js"></script>
+<script>
+	var red = [0, 100, 63];
+	var orange = [40, 100, 60];
+	var green = [75, 100, 40];
+	var blue = [196, 77, 55];
+	var purple = [280, 50, 60];
+	var letterColors = [red, orange, green, blue, purple];
+
+	var myName = "Aashna Kunkolienker";
+	if(10 < 3){
+		bubbleShape = "square";
+	}
+	else {
+		bubbleShape = "circle";
+	}
+	drawName(myName, letterColors);
+	bounceBubbles(myName);
+</script>
 </body>
 </html>

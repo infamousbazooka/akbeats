@@ -75,27 +75,24 @@ body{
 	margin: 10% 0 0;
 	font-size: 300%;
 }
-.pics{
-	display: block;
+.vids{
 	width: 100%;
+	display: block;
+	font-size: 0;
 }
-.pic{
+.vid{
+	width: 40%;
+	margin: 2% 5%;
 	display: inline-block;
-	width: 26%;
-	margin: 3% 1%;
-	padding: 2%;
-	background-color: #3498db;
-	box-shadow: 0px 10px 10px rgba(34,34,34,0.7);
-	cursor: pointer;
 }
-.pic:hover{
-	box-shadow: 0px -5px 10px rgba(34,34,34,0.7);
+.vid video{
+	width: 100%;
+	box-shadow: 0px 0px 10px rgba(34,34,34,0.7);
 }
-.pic p{
-	text-align: justify;
-}
-.pic h2{
-	font-weight: 100;
+.vid div{
+	padding: 4% 0;
+	font-size: initial;
+	border-bottom: 2px solid #333;
 }
 .footer h4{
 	padding: 2%;
