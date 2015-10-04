@@ -78,10 +78,9 @@ body{
 .vids{
 	width: 100%;
 	display: block;
-	font-size: 0;
 }
 .vid{
-	width: 40%;
+	width: 39%;
 	margin: 2% 5%;
 	display: inline-block;
 }
@@ -91,7 +90,6 @@ body{
 }
 .vid div{
 	padding: 4% 0;
-	font-size: initial;
 	border-bottom: 2px solid #333;
 }
 .footer h4{

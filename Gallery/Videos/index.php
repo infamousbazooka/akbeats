@@ -35,7 +35,7 @@
 			</div>
 		</section>
 		<section class="section gallery">
-			<h1>Videos</h1>
+			<h1>VIDEOS</h1>
 			<article class="vids">
 				<?php
 					$i = 1;
@@ -43,10 +43,13 @@
 					if (file_exists("videos/" . $i . ".mp4")) {
 						if (file_exists("videos/" . $i . ".txt")){
 							$str = file_get_contents("videos/" . $i . ".txt");
-							echo '<div class="vid"><video controls><source src="videos/1.mp4" type="video/mp4">Your browser does not support HTML5 video.</video><div><p>' . $str . '</p></div></div>';
+							echo '<div class="vid"><video controls><source src="videos/' . $i . '.mp4" type="video/mp4">Your browser does not support HTML5 video.</video><div><p>' . $str . '</p></div></div>';
 							$i = $i + 1;
 							goto again;
 						}
+					}
+					else{
+						echo "<h2>Videos coming soon.</h2>";
 					}
 				?>
 			</article>

@@ -43,7 +43,7 @@
 					for ($i = 0; $i < sizeof($directories); $i++) {
 						$directories[$i] = str_replace('../Photos/', '', $directories[$i]);
 					    if($directories[$i] != 'css' && $directories[$i] != 'images' && $directories[$i] != 'js'){
-							echo "<a href='$directories[$i]/'><div class='pic'><img src='images/default.png' alt='Aashna Kunkolienker' class='img-responsive'><h2>$directories[$i]</h2></div></a>";
+							echo "<a href='" . $directories[$i] . "/'><div class='pic'><img src='" . $directories[$i] . "/" . $directories[$i] . ".jpg' alt='Aashna Kunkolienker' class='img-responsive'><h2>" . $directories[$i] . "</h2></div></a>";
 						}
 					}
 				?>

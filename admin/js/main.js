@@ -19,3 +19,11 @@ $(window).bind('scroll', function() {
 		$('.menu').removeClass('fixed');
 	}
 });
+
+function display(id){
+	$('#album').css('display', 'none');
+	$('#photo').css('display', 'none');
+	$('#video').css('display', 'none');
+	$('#achievement').css('display', 'none');
+	$(id).css('display', 'block');
+}
