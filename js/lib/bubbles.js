@@ -8,7 +8,7 @@ function Vector(x, y, z) {
         this.y = y;
     };
 }
- 
+
 function PointCollection() {
     this.mousePos = new Vector(0, 0);
     this.pointCollectionX = 0;
@@ -156,7 +156,7 @@ function initEventListeners() {
  
 function updateCanvasDimensions() {
     canvas.attr({
-        height: 500,
+        height: $(window).height(),
         width: $(window).width()
     });
     canvasWidth = canvas.width();

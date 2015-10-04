@@ -170,8 +170,6 @@ body{
 	height: 50px;
 	padding: 5px;
 	background-color: #fff;
-	border: 3px solid #2980b9;
-	border-right: none;
 }
 .social div:hover{
 	background-color: #222d2f;
