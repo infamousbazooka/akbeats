@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<link rel="icon" href="../../icon.png" sizes="16x16" type="image/png">
 	<meta name="author" content="Magnus Fernandes">
-	<meta name="description" content="The official website of Aashna Kuncolienkar.">
+	<meta name="description" content="The official website of Aashna KUNKOLIENKER.">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>ANK Beats | GALLERIA</title>
 	<style>
@@ -39,23 +39,30 @@
 			<article class="vids">
 				<?php
 					$i = 1;
+					$temp = 0;
 					again:
 					if (file_exists("videos/" . $i . ".mp4")) {
 						if (file_exists("videos/" . $i . ".txt")){
 							$str = file_get_contents("videos/" . $i . ".txt");
 							echo '<div class="vid"><video controls><source src="videos/' . $i . '.mp4" type="video/mp4">Your browser does not support HTML5 video.</video><div><p>' . $str . '</p></div></div>';
 							$i = $i + 1;
+							$temp = 1;
 							goto again;
 						}
 					}
-					else{
+					if ($temp != 1) {
 						echo "<h2>Videos coming soon.</h2>";
 					}
 				?>
 			</article>
 		</section>
 		<section class="footer">
-			<h4>AASHNA KUNCOLIENKAR &copy; | 2015</h4>
+			<h4>AASHNA KUNKOLIENKER &copy; | 2015</h4>
+			<p>Powered by <a href="http://www.amberzile.com">Amber<span>Zile</span></a></p>
+		</section>
+		<section class="social">
+			<a href="https://www.youtube.com/channel/UC-n9Vqug6-XxTyoufI6r3fg" target="_blank"><div class="youtube"><img src="../../images/yt.svg" class="img-responsive" alt="Youtube"></div><h4>YOUTUBE</h4></a>
+			<a href="https://www.facebook.com/ankbeats.comOfficial" target="_blank"><div class="facebook"><img src="../../images/fb.svg" class="img-responsive" alt="Facebook"></div><h4>FACEBOOK</h4></a>
 		</section>
 	</div>
 <script src="../../js/lib/jquery.min.js"></script>

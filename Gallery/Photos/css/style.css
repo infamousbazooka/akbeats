@@ -63,6 +63,7 @@ body{
 	z-index: 11;
 	width: 20%;
 	box-shadow: 0px 0px 10px #333;
+	background-color: #fff;
 }
 .right-border{
 	border-right: 2px solid #fafafa;
@@ -72,8 +73,12 @@ body{
 	height: 100%;
 }
 .gallery h1{
-	margin: 10% 0 0;
+	padding-top: 10%;
 	font-size: 300%;
+	padding-bottom: 3px;
+}
+.gallery span{
+	border-bottom: 4px solid #3498db;
 }
 .pics{
 	display: block;
@@ -81,12 +86,18 @@ body{
 }
 .pic{
 	display: inline-block;
-	width: 26%;
+	width: 27%;
 	margin: 3% 1%;
-	padding: 2%;
 	background-color: #3498db;
 	box-shadow: 0px 10px 10px rgba(34,34,34,0.7);
 	cursor: pointer;
+}
+.pic img{
+	border-bottom: 6px solid rgb(255, 255, 255);
+}
+.bar{
+	text-transform: uppercase;
+	padding-bottom: 5px;
 }
 .pic:hover{
 	box-shadow: 0px -5px 10px rgba(34,34,34,0.7);
@@ -97,8 +108,87 @@ body{
 .pic h2{
 	font-weight: 100;
 }
-.footer h4{
-	padding: 2%;
+.footer{
 	background-color: #2980b9;
+	padding: 2%;
+}
+.footer h4{
 	font-weight: 200;
+	margin-bottom: 1%;
+}
+.footer a:hover{
+	color: #ffc200;
+}
+.footer a:hover span{
+	color: #66cc00;
+}
+.social{
+	position: fixed;
+	top: 30px;
+	right: 0;
+	z-index: 9999;
+	background-color: #fff;
+	-webkit-box-shadow: 0px 0px 10px rgba(34,34,34,0.7);
+	box-shadow: 0px 0px 10px rgba(34,34,34,0.7);
+}
+.se{
+	top: 90px;
+}
+.social p{
+	color: #000;
+	display: none;
+}
+.social div{
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+	background-color: #fff;
+}
+.social div:hover{
+	background-color: #222d2f;
+}
+.social h4{
+	display: none;
+	font-weight: normal;
+	padding: 2% 0;
+	background-color: #222d2f;
+	border-bottom: 2px solid #fff;
+}
+@media screen and (max-width: 800px) {
+	body{
+		-webkit-background-size: auto 100%;
+		background-size: auto 100%;
+	}
+	.fixed{
+		position: relative !important;
+	}
+	.menu{
+		position: relative;
+	}
+	.link{
+		display: block;
+		vertical-align: top;
+		width: 100%;
+	}
+	.right-border{
+		border: none;
+	}
+	.social{
+		position: relative;
+		top: 0;
+	}
+	.social div{
+		display: none;
+	}
+	.social h4{
+		display: block;
+	}
+	.gallery span{
+		font-size: 100%;
+	}
+	.pic{
+		display: block;
+		width: 94%;
+		margin: 10px 3%;
+	}
 }

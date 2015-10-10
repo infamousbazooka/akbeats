@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<link rel="icon" href="../icon.png" sizes="16x16" type="image/png">
 	<meta name="author" content="Magnus Fernandes">
-	<meta name="description" content="The official website of Aashna Kuncolienkar.">
+	<meta name="description" content="The official website of Aashna KUNKOLIENKER.">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>ANK Beats | Admin</title>
 	<style>

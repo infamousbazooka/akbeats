@@ -6,7 +6,7 @@ $txt = '<!DOCTYPE html>
     <meta charset="UTF-8">
     <link rel="icon" href="../../../icon.png" sizes="16x16" type="image/png">
     <meta name="author" content="Magnus Fernandes">
-    <meta name="description" content="The official website of Aashna Kuncolienkar.">
+    <meta name="description" content="The official website of Aashna KUNKOLIENKER.">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>ANK Beats | GALLERIA</title>
     <style>
@@ -51,7 +51,12 @@ $txt = '<!DOCTYPE html>
             </div>
         </section>
         <section class="footer">
-            <h4>AASHNA KUNCOLIENKAR &copy; | 2015</h4>
+            <h4>AASHNA KUNKOLIENKER &copy; | 2015</h4>
+            <p>Powered by <a href="http://www.amberzile.com">Amber<span>Zile</span></a></p>
+        </section>
+        <section class="social">
+            <a href="https://www.youtube.com/channel/UC-n9Vqug6-XxTyoufI6r3fg" target="_blank"><div class="youtube"><img src="../images/yt.svg" class="img-responsive" alt="Youtube"></div><h4>YOUTUBE</h4></a>
+            <a href="https://www.facebook.com/ankbeats.comOfficial" target="_blank"><div class="facebook"><img src="../images/fb.svg" class="img-responsive" alt="Facebook"></div><h4>FACEBOOK</h4></a>
         </section>
     </div>
 <script src="../../../js/lib/jquery.min.js"></script>
@@ -83,7 +88,7 @@ if (file_exists($target_file)) {
     $uploadOk = 0;
 }
 // Check file size
-if ($_FILES["fileToUpload"]["size"] > 5000000) {
+if ($_FILES["fileToUpload"]["size"] > 50000000) {
     echo "Sorry, your file is too large.";
     $uploadOk = 0;
 }

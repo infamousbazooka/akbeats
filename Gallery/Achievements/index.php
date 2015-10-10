@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<link rel="icon" href="../../icon.png" sizes="16x16" type="image/png">
 	<meta name="author" content="Magnus Fernandes">
-	<meta name="description" content="The official website of Aashna Kuncolienkar.">
+	<meta name="description" content="The official website of Aashna KUNKOLIENKER.">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>ANK Beats | GALLERIA</title>
 	<style>
@@ -40,6 +40,7 @@
 				<ol class="carousel-indicators">
 					<?php
 						$i = 1;
+						$temp = 0;
 						again:
 						if (file_exists("slider/" . $i . ".jpg")) {
 							if (file_exists("slider/" . $i . ".txt")){
@@ -47,16 +48,18 @@
 									$str = file_get_contents("slider/" . $i . ".txt");
 									echo '<li data-target="#myCarousel" data-slide-to="0" class="active"></li>';
 									$i = $i + 1;
+									$temp = 1;
 									goto again;
 								}
 								$slidetag = $i - 1;
 								$str = file_get_contents("slider/" . $i . ".txt");
 								echo '<li data-target="#myCarousel" data-slide-to="' . $slidetag . '"></li>';
 								$i = $i + 1;
+								$temp = 1;
 								goto again;
 							}
 						}
-						else{
+						if($temp != 1){
 							echo "<h2>Stay tuned to check my achievements.</h2>";
 						}
 					?>
@@ -64,6 +67,7 @@
 				<div class="carousel-inner" role="listbox">
 					<?php
 						$j = 1;
+						$temp1 = 0;
 						againt:
 						if (file_exists("slider/" . $j . ".jpg")) {
 							if (file_exists("slider/" . $j . ".txt")){
@@ -71,15 +75,17 @@
 									$str = file_get_contents("slider/" . $j . ".txt");
 									echo '<div class="item active"><img class="img-responsive" src="slider/1.jpg" alt="' . $str . '"></div>';
 									$j = $j + 1;
+									$temp1 = 1;
 									goto againt;
 								}
 								$str = file_get_contents("slider/" . $j . ".txt");
 								echo '<div class="item"><img class="img-responsive" src="slider/' . $j . '.jpg" alt="Chania"></div>';
 								$j = $j + 1;
+								$temp = 1;
 								goto againt;
 							}
 						}
-						else{
+						if($temp1 != 1){
 							echo "<h2>Stay tuned to check my achievements.</h2>";
 						}
 					?>
@@ -95,7 +101,7 @@
 			</div>
 		</section>
 		<section class="footer">
-			<h4>AASHNA KUNCOLIENKAR &copy; | 2015</h4>
+			<h4>AASHNA KUNKOLIENKER &copy; | 2015</h4>
 		</section>
 	</div>
 <script src="../../js/lib/jquery.min.js"></script>

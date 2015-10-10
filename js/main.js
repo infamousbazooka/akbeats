@@ -6,6 +6,8 @@ $(document).ready(function() {
 });
 $(window).resize(function() {
 	$('.section').css('height', $(window).height() + "px");
+	$('.section-half').css('height', ($(window).height()*1/4) + "px");
+	$('.three-inst').css('height', ($(window).height()*3/4) + "px");
 	$('.main').css('line-height', $(window).height() + "px");
 });
 function hideloader(){

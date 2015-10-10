@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<link rel="icon" href="../../icon.png" sizes="16x16" type="image/png">
 	<meta name="author" content="Magnus Fernandes">
-	<meta name="description" content="The official website of Aashna Kuncolienkar.">
+	<meta name="description" content="The official website of Aashna KUNKOLIENKER.">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>ANK Beats | GALLERIA</title>
 	<style>
@@ -35,7 +35,7 @@
 			</div>
 		</section>
 		<section class="section gallery">
-			<h1>ALBUMS</h1>
+			<h1><span>ALBUMS</span></h1>
 			<div class="pics">
 				<?php
 					$i = 0;
@@ -43,14 +43,19 @@
 					for ($i = 0; $i < sizeof($directories); $i++) {
 						$directories[$i] = str_replace('../Photos/', '', $directories[$i]);
 					    if($directories[$i] != 'css' && $directories[$i] != 'images' && $directories[$i] != 'js'){
-							echo "<a href='" . $directories[$i] . "/'><div class='pic'><img src='" . $directories[$i] . "/" . $directories[$i] . ".jpg' alt='Aashna Kunkolienker' class='img-responsive'><h2>" . $directories[$i] . "</h2></div></a>";
+							echo "<a href='" . $directories[$i] . "/'><div class='pic'><img src='" . $directories[$i] . "/" . $directories[$i] . ".jpg' alt='Aashna Kunkolienker' class='img-responsive'><div class=\"bar\"><h2>" . $directories[$i] . "</h2></div></div></a>";
 						}
 					}
 				?>
 			</div>
 		</section>
 		<section class="footer">
-			<h4>AASHNA KUNCOLIENKAR &copy; | 2015</h4>
+			<h4>AASHNA KUNKOLIENKER &copy; | 2015</h4>
+			<p>Powered by <a href="http://www.amberzile.com">Amber<span>Zile</span></a></p>
+		</section>
+		<section class="social">
+			<a href="https://www.youtube.com/channel/UC-n9Vqug6-XxTyoufI6r3fg" target="_blank"><div class="youtube"><img src="../../images/yt.svg" class="img-responsive" alt="Youtube"></div><h4>YOUTUBE</h4></a>
+			<a href="https://www.facebook.com/ankbeats.comOfficial" target="_blank"><div class="facebook"><img src="../../images/fb.svg" class="img-responsive" alt="Facebook"></div><h4>FACEBOOK</h4></a>
 		</section>
 	</div>
 <script src="../../js/lib/jquery.min.js"></script>
