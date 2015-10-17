@@ -43,7 +43,8 @@ $txt = '<!DOCTYPE html>
                     $i = 1;
                     again:
                     if (file_exists("images/" . $i . ".jpg")) {
-                        echo \'<a href="#"><div class="pic"><img src="images/\' . $i . \'.jpg" alt="DEFAULT" class="img-responsive"></div></a>\';
+                        $str = file_get_contents($i . ".txt");
+                        echo \'<a href="#"><div class="pic"><img src="images/\' . $i . \'.jpg" alt="DEFAULT" class="img-responsive"><article><p>\' . $str . \'</p></article></div></a>\';
                         $i = $i + 1;
                         goto again;
                     }
@@ -55,8 +56,8 @@ $txt = '<!DOCTYPE html>
             <p>Powered by <a href="http://www.amberzile.com">Amber<span>Zile</span></a></p>
         </section>
         <section class="social">
-            <a href="https://www.youtube.com/channel/UC-n9Vqug6-XxTyoufI6r3fg" target="_blank"><div class="youtube"><img src="../images/yt.svg" class="img-responsive" alt="Youtube"></div><h4>YOUTUBE</h4></a>
-            <a href="https://www.facebook.com/ankbeats.comOfficial" target="_blank"><div class="facebook"><img src="../images/fb.svg" class="img-responsive" alt="Facebook"></div><h4>FACEBOOK</h4></a>
+            <a href="https://www.youtube.com/channel/UC-n9Vqug6-XxTyoufI6r3fg" target="_blank"><div class="youtube"><img src="../../../images/yt.svg" class="img-responsive" alt="Youtube"></div><h4>YOUTUBE</h4></a>
+            <a href="https://www.facebook.com/ankbeats.comOfficial" target="_blank"><div class="facebook"><img src="../../../images/fb.svg" class="img-responsive" alt="Facebook"></div><h4>FACEBOOK</h4></a>
         </section>
     </div>
 <script src="../../../js/lib/jquery.min.js"></script>

@@ -60,6 +60,7 @@ body{
 	transform: rotateX(360deg);
 }
 .logo{
+	background-color: #fff;
 	z-index: 11;
 	width: 20%;
 	box-shadow: 0px 0px 10px #333;

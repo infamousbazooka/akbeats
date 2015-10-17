@@ -67,6 +67,7 @@
 				<div class="form-group">
 					<input required type="file" name="imagetoupload" id="imagetoupload">
 				</div>
+				<input required type="text" name="imagedesc" class="form-control" placeholder="Image Description">
 				<button type="submit" class="btn btn-default" name="submit">Upload</button>
 			</form>
 		</div>

@@ -1,5 +1,6 @@
 <?php
 $albumname = $_POST["albumname"];
+$description = $_POST["imagedesc"];
 if (!file_exists('../Gallery/Photos/'.$albumname)) {
     mkdir('../Gallery/Photos/'. $albumname .'/images', 0777, true);
 }
@@ -47,6 +48,9 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["imagetoupload"]["tmp_name"], "../Gallery/Photos/". $albumname . "/images/" . $filecount . ".jpg")) {
         echo "The file ". basename( $_FILES["imagetoupload"]["name"]). " has been uploaded.";
+        $myfile = fopen("../Gallery/Photos/" . $albumname . "/" . $filecount . ".txt", "w") or die("Unable to open file!");
+        fwrite($myfile, $description);
+        fclose($myfile);
         header("Location: ../admin");
     } else {
         echo "Sorry, there was an error uploading your file.";
