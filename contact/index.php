@@ -17,6 +17,16 @@
 		<div class="load"></div>
 	</div>
 	<div class="mainwrapper">
+		<div class="mobile">
+			<section class="btn">-</section>
+			<section><h3>ANK beats</h3></section>
+			<ul>
+				<li><a href="../"><h4>Home</h4></a></li>
+				<li><a href="../About/"><h4>About Me</h4></a></li>
+				<li><a href="../Gallery/"><h4>Gallery</h4></a></li>
+				<li class="active"><a href="#"><h4>Contact Me</h4></a></li>
+			</ul>
+		</div>
 		<section class="menu">
 			<div class="link">
 				<a href="../"><p class="right-border">Home</p></a>
@@ -36,23 +46,23 @@
 		</section>
 		<div id="map" class="section map"></div>
 		<div class="contact section">
-			<form action="mail.php" method="post">
+			<form name="cform" method="post" action="mail.php">
 				<h1><span>CONTACT ME!!</span></h1>
 				<article>
 					<div>Name</div>
-					<input type="text" name="name">
+					<input type="text" name="fname" required>
 				</article>
 				<article>
 					<div>Email</div>
-					<input type="email" name="email">
+					<input type="email" name="email" required>
 				</article>
 				<article>
 					<div>Phone</div>
-					<input type="number" name="cno">
+					<input type="number" name="cno" required>
 				</article>
 				<article>
 					<div>Message</div>
-					<textarea name="message" id="message" cols="30" rows="10"></textarea>
+					<textarea name="message" required id="message" cols="30" rows="10"></textarea>
 				</article>
 				<article class="button">
 					<input type="submit" value="Submit">

@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="icon" href="../favicon.png" sizes="16x16" type="image/png">
+	<title>Contact - Parijat Traders</title>
+</head>
+<body onload="hideloader()">
+	<div class="loader">
+		<div class="tyre"><div class="wheel"></div></div>
+	</div>
+	<div class="navbar navbar-inverse navbar-static-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="callto://+918322226464" class="navbar-btn btn btn-danger" style="color:#fff">Call us +91 832 2226464</a>
+				<button class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navHeaderCollapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse navHeaderCollapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="../"><i class="fa fa-home"></i>Home</a></li>
+	    			<li><a href="../Partners/"><i class="fa fa-heart"></i>Partners</a></li>
+	    			<li><a href="../About-Us/"><i class="fa fa-book"></i>About Us</a></li>
+	    			<li class="active"><a href="#"><i class="fa fa-phone"></i>Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<section>
+		<div class="container mainbody">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<p><h1>DROP ME A LINE</h1></p>
+					<p><h4>If you want to enquire about tyres or just feel like saying "hi!!", write to us and we'll get back to you as soon as possible.</h4></p>
+				</div>
+				<form enctype="text/plain" class="col-sm-6 col-sm-offset-3 form" id="message">
+					<input type="text" class="form-control" placeholder="Name" name="name" required id="name">
+					<input type="number" class="form-control" placeholder="Phone" name="cno" required id="number">
+					<input type="email" class="form-control" placeholder="E-mail" name="email" required id="email">
+					<input type="text" class="form-control" placeholder="How did you hear about us?" name="info" required id="info">
+					<textarea class="form-control" placeholder="Message" name="comment" required id="comment"></textarea>
+					<input type="submit" class="btn" value="SEND MESSAGE">
+				</form>
+			</div>
+		</div>
+	</section>
+	<div class="container address">
+		<hr>
+		<div class="row">
+			<div class="col-md-4" id="map-canvas">
+			</div>
+			<div class="col-md-4 add addressborder">
+				<section>
+					<h4><b><u>Main Showroom:</u></b></h4>
+					<p>Oppositte EDC House, Minaxi Building,</p>
+					<p>Next to Andra Bank</p>
+					<p>Panjim Goa.</p>
+					<p>Phone No : +91 832 2226464 / 6643327</p>
+				</section>
+			</div>
+			<div class="col-md-4 add">
+				<section>
+					<h4><b><u>Branch:</u></b></h4>
+					<p>G1/G2, Jairam Complex</p>
+					<p>Neugi Nagar</p>
+					<p>Panjim Goa.</p>
+					<p>Phone No : +91 832 6641893</p>
+				</section>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>	    
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnycWatbGyK6ldFqErjFtko1yeMclNUOA&amp;sensor=true"></script>
+	<footer class="navbar navbar-inverse">
+		<div class="container">
+			<a href="https://www.google.com/url?q=https%3A%2F%2Fwww.facebook.com%2Fpages%2FParijat-Traders%2F825187210894353&sa=D&sntz=1&usg=AFQjCNE3j9Ezi4QK6jFW8zLcdS78_-xSZg" class="navbar-btn btn btn-info pull-left">Like us on Facebook</a>
+			<p class="navbar-text pull-left">&copy; 2015. All rights reserved. Parijat Traders</p>
+			<p class="navbar-text pull-right">Powered by <a href="http://www.amberzile.com">Amber<span>Zile</span></a></p>
+		</div>
+	</footer>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="../js/main.js"></script>
+	<script type='text/javascript'>
+		$(document).ready(function() {
+			google.maps.event.addDomListener(window, 'load', initialize);
+			function initialize() {
+				var latlng = new google.maps.LatLng(15.496154,73.82437);
+				var mapOptions = {
+					center: latlng,
+					scrollWheel: false,
+					zoom: 18
+				};
+				var marker = new google.maps.Marker({
+					position: latlng,
+					url: '/',
+					animation: google.maps.Animation.DROP
+				});
+				var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+				marker.setMap(map);
+			};
+		});
+	</script>
+</body>
+</html>

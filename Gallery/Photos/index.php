@@ -17,6 +17,16 @@
 		<div class="load"></div>
 	</div>
 	<div class="mainwrapper">
+		<div class="mobile">
+			<section class="btn">-</section>
+			<section><h3>ANK beats</h3></section>
+			<ul>
+				<li><a href="../../"><h4>Home</h4></a></li>
+				<li><a href="../../About/"><h4>About Me</h4></a></li>
+				<li><a href="../"><h4>Gallery</h4></a></li>
+				<li><a href="../../Contact/"><h4>Contact Me</h4></a></li>
+			</ul>
+		</div>
 		<section class="menu">
 			<div class="link">
 				<a href="../../"><p class="right-border">Home</p></a>
@@ -42,8 +52,10 @@
 					$directories = glob('../Photos' . '/*' , GLOB_ONLYDIR);
 					for ($i = 0; $i < sizeof($directories); $i++) {
 						$directories[$i] = str_replace('../Photos/', '', $directories[$i]);
+						$link = $directories[$i];
+						$link = str_replace(' ', '_', $link);
 					    if($directories[$i] != 'css' && $directories[$i] != 'images' && $directories[$i] != 'js'){
-							echo "<a href='" . $directories[$i] . "/'><div class='pic'><img src='" . $directories[$i] . "/" . $directories[$i] . ".jpg' alt='Aashna Kunkolienker' class='img-responsive'><div class=\"bar\"><h2>" . $directories[$i] . "</h2></div></div></a>";
+							echo '<a href="' . $directories[$i] . '/"><div class="pic"><img src="' . $link . '/' . $link .'.jpg" alt="Aashna Kunkolienker" class="img-responsive"><div class="bar"><h2>' . $directories[$i] . '</h2></div></div></a>';
 						}
 					}
 				?>

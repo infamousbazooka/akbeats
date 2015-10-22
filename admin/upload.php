@@ -1,5 +1,6 @@
 <?php
 $aname = $_POST["aname"];
+$link = str_replace(' ', '_', $aname);
 $txt = '<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,11 +65,11 @@ $txt = '<!DOCTYPE html>
 <script src="../js/all.js"></script>
 </body>
 </html>';
-if (!file_exists('../Gallery/Photos/'.$aname)) {
-    mkdir('../Gallery/Photos/'. $aname, 0777, true);
-    mkdir('../Gallery/Photos/'. $aname .'/images', 0777, true);
+if (!file_exists('../Gallery/Photos/'.$link)) {
+    mkdir('../Gallery/Photos/'. $link, 0777, true);
+    mkdir('../Gallery/Photos/'. $link .'/images', 0777, true);
 }
-$target_dir = "../Gallery/Photos/". $aname ."/";
+$target_dir = "../Gallery/Photos/". $link ."/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
@@ -104,9 +105,9 @@ if ($uploadOk == 0) {
     echo "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
 } else {
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "../Gallery/Photos/". $aname . "/" . $aname . ".jpg")) {
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "../Gallery/Photos/". $link . "/" . $link . ".jpg")) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-        $myfile = fopen("../Gallery/Photos/". $aname . "/index.php", "w") or die("Unable to open file!");
+        $myfile = fopen("../Gallery/Photos/". $link . "/index.php", "w") or die("Unable to open file!");
         fwrite($myfile, $txt);
         fclose($myfile);
         header("Location: ../admin");

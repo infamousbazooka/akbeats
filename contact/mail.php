@@ -1,14 +1,22 @@
 <?php
-   $to = "magnusfernandes1295@gmail.com";
-   $subject = "Hello Magnus";
-   $message = "Name: ".$_POST['name'] ."\nEmail: ".$_POST['email'] ."\nNumber: " . $_POST['cno'] . "\Message: ". $_POST['message'];
-   $header = "From:" . $_POST['name']. " \r\n";
-
-   $retval = mail ($to,$subject,$message,$header);
-   if( $retval == true ){
-	header("Location: ../Contact/");
-   }
-   else{
-   	echo "Failed!!! Please check your internet connection.";
-   }
-?>
+$fname = $_POST['fname'];
+$email = $_POST['email'];
+$cno = $_POST['cno'];
+$message = $_POST['message'];
+require 'phpmailer/PHPMailerAutoload.php';
+$body = "Hello Aashna!! My name is " . $fname . ". My email address is " . $email . " and my contact number is " . $cno . ". My message to you is as follows: " . $message;
+$subject="Ank beats Contact: " . $fname;
+$mail = new PHPMailer();
+$mail->IsHTML(true); 
+$mail->Host = "relay-hosting.secureserver.net"; // SMTP server
+$mail->From = $email;
+$mail->Subject = $subject;
+$mail->Body = $body;
+$mail->WordWrap = 50;
+$mail->AddAddress("ankbeatsofficial@gmail.com");
+if(!$mail->send()) {
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+    echo 'Message has been sent';
+}

@@ -18,77 +18,16 @@
 		<div class="load"></div>
 	</div>
 	<div class="mainwrapper">
-		<div class="navbar navbar-inverse navbar-static-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a href="callto://+918322226464" class="navbar-btn btn btn-danger" style="color:#fff">For help call +91-9637078086</a>
-					<button class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navHeaderCollapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				<div class="collapse navbar-collapse navHeaderCollapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="active" onclick="display('#album')"><a href="#">Add Albums</a></li>
-		    			<li onclick="display('#photo')"><a href="#">Add Images</a></li>
-		    			<li onclick="display('#video')"><a href="#">Add Videos</a></li>
-		    			<li onclick="display('#achievement')"><a href="#">Add Achievements</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="container jumbotron album" id="album">
-			<form action="upload.php" method="post" enctype="multipart/form-data">
-				<h3>SELECT ALBUM:</h3>
+		<div class="container">
+			<form action="next.php" class="jumbotron" method="POST" style="width:50%;margin:5% 25%;">
+				<h2>LOGIN</h2>
 				<div class="form-group">
-					<input required type="file" name="fileToUpload" id="fileToUpload">
+					<input type="text" class="form-control" name="uname" required placeholder="USERNAME">
 				</div>
-				<input required type="text" name="aname" class="form-control" placeholder="Album Title">
-				<button type="submit" class="btn btn-default" name="submit">Upload</button>
-			</form>
-		</div>
-		<div class="container jumbotron photo" id="photo">
-			<form action="photo.php" method="post" enctype="multipart/form-data">
-				<select name="albumname" class="form-control" required>
-					<option value="">Please select</option>
-					<?php
-						$i = 0;
-						$directories = glob('../Gallery/Photos' . '/*' , GLOB_ONLYDIR);
-						for ($i = 0; $i < sizeof($directories); $i++) {
-							$directories[$i] = str_replace('../Gallery/Photos/', '', $directories[$i]);
-						    if($directories[$i] != 'css' && $directories[$i] != 'images' && $directories[$i] != 'js'){
-								echo "<option value=" . $directories[$i] . ">" . $directories[$i] . "</option>";
-							}
-						}
-					?>
-				</select>
-				<h3>SELECT ALBUM IMAGE:</h3>
 				<div class="form-group">
-					<input required type="file" name="imagetoupload" id="imagetoupload">
+					<input type="password" class="form-control" name="pword" required placeholder="PASSWORD">
 				</div>
-				<input required type="text" name="imagedesc" class="form-control" placeholder="Image Description">
-				<button type="submit" class="btn btn-default" name="submit">Upload</button>
-			</form>
-		</div>
-		<div class="container jumbotron video" id="video">
-			<form action="video.php" method="post" enctype="multipart/form-data">
-				<h3>SELECT VIDEO:</h3>
-				<div class="form-group">
-					<input required type="file" name="videotoupload" id="videotoupload">
-				</div>
-				<input required type="text" name="videoname" class="form-control" placeholder="Video Title">
-				<button type="submit" class="btn btn-default" name="submit">Upload</button>
-			</form>
-		</div>
-		<div class="container jumbotron achievement" id="achievement">
-			<form action="achievements.php" method="post" enctype="multipart/form-data">
-				<h3>SELECT ACHIEVEMENT IMAGE:</h3>
-				<div class="form-group">
-					<input required type="file" name="atoupload" id="atoupload">
-				</div>
-				<input required type="text" name="acname" class="form-control" placeholder="Achievement description">
-				<button type="submit" class="btn btn-default" name="submit">Upload</button>
+				<input class="form-control" type="submit" value="SUBMIT">
 			</form>
 		</div>
 	</div>

@@ -17,6 +17,7 @@ a,li,ul,ol{
 }
 h1,h2,h3,h4,h5,h6,span{
 	font-family: 'Montserrat', sans-serif;
+	font-weight: 100;
 }
 body{
 	background-color: #fff;
@@ -27,6 +28,32 @@ body{
 .section{
 	z-index: 98;
 	position: relative;
+}
+.mobile{
+	display: none;
+	background-color: #fff;
+	text-align: left;
+}
+.mobile section{
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 10px;
+	border-radius: 5px;
+	font-weight: 200;
+}
+.btn{
+	background-color: #3498db;
+	cursor: pointer;
+}
+.mobile ul{
+	display: none;
+}
+.mobile li{
+	padding: 5px;
+	background-color: #3498db;
+}
+.mobile .active{
+	background-color: #2980b9;
 }
 .menu{
 	display: block;
@@ -133,8 +160,12 @@ body{
 	.fixed{
 		position: relative !important;
 	}
+	.mobile{
+		display: block;
+	}
 	.menu{
 		position: relative;
+		display: none;
 	}
 	.link{
 		display: block;

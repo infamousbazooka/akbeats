@@ -17,6 +17,7 @@ a,li,ul,ol{
 }
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
 }
 body{
 	max-width: 1600px;
@@ -38,6 +39,32 @@ canvas{
 .section{
 	z-index: 98;
 	position: relative;
+}
+.mobile{
+	display: none;
+	background-color: #fff;
+	text-align: left;
+}
+.mobile section{
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 10px;
+	border-radius: 5px;
+	font-weight: 200;
+}
+.btn{
+	background-color: #3498db;
+	cursor: pointer;
+}
+.mobile ul{
+	display: none;
+}
+.mobile li{
+	padding: 5px;
+	background-color: #3498db;
+}
+.mobile .active{
+	background-color: #2980b9;
 }
 .menu{
 	display: block;
@@ -153,6 +180,8 @@ canvas{
 .footer{
 	background-color: #2980b9;
 	padding: 2%;
+	position: relative;
+	z-index: 99999999999999999;
 }
 .footer h4{
 	font-weight: 200;
@@ -196,20 +225,53 @@ canvas{
 	background-color: #222d2f;
 	border-bottom: 2px solid #fff;
 }
+.arrow{
+	z-index: 9999;
+	display: inline-block;
+	position: fixed;
+}
+.arrow h1{
+	display: inline-block;
+	background-color: #3498db;
+	color: #222d2f;
+	border-radius: 50%;
+	font-size: 3em;
+	text-align: center;
+	height: 40px;
+	left: -20px;
+	position: relative;
+	-webkit-animation:bounce .9s infinite;
+	-moz-animation:bounce .9s infinite;
+	-o-animation:bounce .9s infinite;
+	-ms-animation:bounce .9s infinite;
+	animation: bounce .9s infinite;
+}
+@-webkit-keyframes bounce{
+    0%{
+    	top: 10px;
+    }
+    100%{
+    	top: -10px;
+    }
+}
+@keyframes bounce{
+    0%{
+    	top: 10px;
+    }
+    100%{
+    	top: -10px;
+    }
+}
 @media screen and (max-width: 800px) {
 	.fixed{
 		position: relative !important;
 	}
+	.mobile{
+		display: block;
+	}
 	.menu{
 		position: relative;
-	}
-	.link{
-		display: block;
-		vertical-align: top;
-		width: 100%;
-	}
-	.right-border{
-		border: none;
+		display: none;
 	}
 	.inst{
 		display: none;
